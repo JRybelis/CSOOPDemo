@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyManagementApp", "CompanyManagementApp\CompanyManagementApp.csproj", "{5033B84B-0710-452F-A02D-480ED64B4C3D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITCompanyManagementApp", "ITCompanyManagementApp\ITCompanyManagementApp.csproj", "{5033B84B-0710-452F-A02D-480ED64B4C3D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
