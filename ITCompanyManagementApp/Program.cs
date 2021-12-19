@@ -11,8 +11,9 @@ class Program
     {
         Employee person1 = new Developer("John", "Cusack",
             3, "C++");
-        Employee person2 = new Employee("Steve", "Bannon", 4);
-        Employee person3 = new Employee("Mike", "Judge", 5);
+        Employee person2 = new QAAutomationEngineer("Steve", "Bannon", 4, "C#", "Web");
+        Employee person3 = new BusinessAnalyst("Mike", "Judge", 5, "UML Creator");
+        Employee person4 = new QAEngineer("Darren", "Willis", 6, "Mobile");
 
         ITCompany companyCoherent = new ITCompany("Coherent", new Employee("Mike", "Brown", 3));
         ITCompany companyMicrosoft = new ITCompany("Microsoft", new Employee("Steve", "Bannon", 4));
@@ -20,7 +21,7 @@ class Program
         companyCoherent.Hire(person1);
         companyCoherent.Hire(person2);
         companyCoherent.Hire(person3);
-        companyMicrosoft.Hire(person2);
+        companyMicrosoft.Hire(person4);
 
         // indexers: syntactic sugar as opposed to calling company.GetEmployeeByName("John", "Cusack");
         var employee3 = companyCoherent["John", "Cusack"];
