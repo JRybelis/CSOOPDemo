@@ -28,7 +28,7 @@ public class ITCompany
         {
             foreach (var employee in Employees)
             {
-                if (employee.TaxId == taxId)
+                if (employee.TaxID == taxId)
                 {
                     return employee;
                 }

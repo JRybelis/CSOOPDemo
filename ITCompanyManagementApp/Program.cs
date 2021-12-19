@@ -1,7 +1,7 @@
 ﻿using System;
-using ITCompanyManageApplication.Common_entity;
-using ITCompanyManageApplication.CompanyEntities;
-using ITCompanyManageApplication.EmployeeEntities;
+using ITCompanyManagementApp.CommonEntities;
+using ITCompanyManagementApp.CompanyEntities;
+using ITCompanyManagementApp.EmployeeEntities;
 
 namespace ITCompanyManagementApp;
 
