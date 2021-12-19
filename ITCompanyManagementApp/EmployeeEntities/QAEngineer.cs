@@ -8,4 +8,9 @@ public class QAEngineer:Employee
     {
         TestSpecialisation = testSpecialisation;
     }
+
+    public override string ProduceWorkResults()
+    {
+        return "I have created a test case.";
+    }
 }

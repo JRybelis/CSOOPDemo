@@ -10,4 +10,9 @@ public class QAAutomationEngineer:Employee
         ProgrammingLanguage = programmingLanguage;
         TestSpecialisation = testSpecialisation;
     }
+
+    public override string ProduceWorkResults()
+    {
+        return "I have automated something.";
+    }
 }

@@ -1,6 +1,6 @@
 namespace ITCompanyManagementApp.CommonEntities;
 
-public class Person
+public abstract class Person
 {
     private string _firstName;
     //properties to be used, in order to avoid fields, as above

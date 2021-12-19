@@ -12,5 +12,10 @@ public class Developer:Employee
     {
         Console.WriteLine("Coding now...");
     }
-    
+
+
+    public override string ProduceWorkResults()
+    {
+        return "I have implemented a method";
+    }
 }

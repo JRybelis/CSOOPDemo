@@ -8,4 +8,9 @@ public class BusinessAnalyst:Employee
     {
         ToolUsed = toolUsed;
     }
+
+    public override string ProduceWorkResults()
+    {
+        return "I have created an UML diagram";
+    }
 }

@@ -15,8 +15,8 @@ class Program
         Employee person3 = new BusinessAnalyst("Mike", "Judge", 5, "UML Creator");
         Employee person4 = new QAEngineer("Darren", "Willis", 6, "Mobile");
 
-        ITCompany companyCoherent = new ITCompany("Coherent", new Employee("Mike", "Brown", 3));
-        ITCompany companyMicrosoft = new ITCompany("Microsoft", new Employee("Steve", "Bannon", 4));
+        ITCompany companyCoherent = new ITCompany("Coherent", new Developer("Mike", "Brown", 3, "C"));
+        ITCompany companyMicrosoft = new ITCompany("Microsoft", new Developer("Steve", "Bannon", 2, "Cobol"));
             
         companyCoherent.Hire(person1);
         companyCoherent.Hire(person2);

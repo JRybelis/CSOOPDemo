@@ -2,7 +2,7 @@ using ITCompanyManagementApp.CommonEntities;
 
 namespace ITCompanyManagementApp.EmployeeEntities
 {
-    public class Employee:Person
+    public abstract class Employee:Person
     {
         public int TaxID { get; }
 
@@ -16,6 +16,7 @@ namespace ITCompanyManagementApp.EmployeeEntities
         {
             return this.TaxID == (obj as Employee)?.TaxID;
         }
-    }    
+        public abstract string ProduceWorkResults();
+    }
 }
 
