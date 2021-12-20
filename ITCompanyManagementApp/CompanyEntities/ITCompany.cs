@@ -1,4 +1,4 @@
-using System;
+using System.Text;
 using ITCompanyManagementApp.EmployeeEntities;
 
 namespace ITCompanyManagementApp.CompanyEntities;
@@ -6,7 +6,7 @@ namespace ITCompanyManagementApp.CompanyEntities;
 public class ITCompany
 {
     public static int AllHiredEmployeesInAllCompanies = 0; //static field, to count across all class instances.
-    private const int MAX_EMPLOYEE_NUMBER = 10;
+    private const int MaxEmployeeNumber = 10;
     private int _hiredEmployees;
     public Employee Director { get; }
     public string Name { get; }
@@ -17,7 +17,7 @@ public class ITCompany
         Director = director;
         Name = name;
         
-        Employees = new Employee[MAX_EMPLOYEE_NUMBER];
+        Employees = new Employee[MaxEmployeeNumber];
         _hiredEmployees = 0;
     }
 
@@ -54,7 +54,7 @@ public class ITCompany
 
     public void Hire(Employee employee)
     {
-        if (_hiredEmployees < MAX_EMPLOYEE_NUMBER)
+        if (_hiredEmployees < MaxEmployeeNumber)
         {
             Employees[_hiredEmployees] = employee;
             _hiredEmployees++;
@@ -64,5 +64,17 @@ public class ITCompany
         {
             throw new Exception("Cannot hire any more people.");
         }
+    }
+
+    public string GetCompanyResults()
+    {
+        var builder = new StringBuilder(); // string is immutable, takes up a lot of memory. Combining a lot of them is better with a special less memory consuming builder, to make the operation quicker.
+        for (int i = 0; i < _hiredEmployees; i++)
+        {
+            builder.Append(Employees[i].ProduceWorkResults());
+            builder.Append('\n');
+        }
+
+        return builder.ToString();
     }
 }

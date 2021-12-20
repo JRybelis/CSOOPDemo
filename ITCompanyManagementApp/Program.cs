@@ -15,21 +15,23 @@ class Program
         Employee person3 = new BusinessAnalyst("Mike", "Judge", 5, "UML Creator");
         Employee person4 = new QAEngineer("Darren", "Willis", 6, "Mobile");
 
-        ITCompany companyCoherent = new ITCompany("Coherent", new Developer("Mike", "Brown", 3, "C"));
-        ITCompany companyMicrosoft = new ITCompany("Microsoft", new Developer("Steve", "Bannon", 2, "Cobol"));
-            
+        var companyCoherent = new ITCompany("Coherent", new Developer("Mike", "Brown", 3, "C"));
+
         companyCoherent.Hire(person1);
         companyCoherent.Hire(person2);
         companyCoherent.Hire(person3);
-        companyMicrosoft.Hire(person4);
+        companyCoherent.Hire(person4);
 
         // indexers: syntactic sugar as opposed to calling company.GetEmployeeByName("John", "Cusack");
-        var employee3 = companyCoherent["John", "Cusack"];
-        var employee1 = companyCoherent[1];
-        var employee2 = companyCoherent[5];
+        var dummy = companyCoherent["Mr. John", "Cusack"];
+        var dummy1 = companyCoherent[3];
+        var dummy2 = companyCoherent[5];
 
         //accessing static fields is the same as calling static methods:
         Console.WriteLine(ITCompany.AllHiredEmployeesInAllCompanies);
-            
+
+        string companyCoherentResults = companyCoherent.GetCompanyResults();
+        Console.WriteLine(companyCoherentResults);
+        Console.ReadLine();
     }
 }
