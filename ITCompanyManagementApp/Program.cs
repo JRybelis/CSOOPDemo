@@ -35,11 +35,17 @@ class Program
         Console.WriteLine(companyCoherentResults);
         Console.WriteLine(companyCoherentInformation);
 
-        IntList list = new IntList();
+        //IntList list = new IntList();
+        MyList<int> list = new MyList<int>(); 
         list.Add(1);
         list.Add(2);
         list.Add(3);
 
+        MyList<float> floatList = new MyList<float>();
+        floatList.Add(2.0f);
+        floatList.Add(5.0f);
+        floatList.Add(9.2f);
+        
         bool isContains = list.Contains(2);
 
         int temp = list[1];

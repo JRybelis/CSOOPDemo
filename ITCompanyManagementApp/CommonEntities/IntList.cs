@@ -1,18 +1,18 @@
 namespace ITCompanyManagementApp.CommonEntities;
 
-public class IntList
+public class MyList<T>
 {
-    public IntNode Head { get; set; }
-    public IntNode Tail { get; set; }
+    public MyNode<T> Head { get; set; }
+    public MyNode<T> Tail { get; set; }
     
-    public IntList()
+    public MyList()
     {
         Head = null;
     }
 
-    public void Add(int data)
+    public void Add(T data)
     {
-        IntNode node = new IntNode(data);
+        MyNode<T> node = new MyNode<T>(data);
         
         if (Head == null)
         {
@@ -27,12 +27,13 @@ public class IntList
         
     }
 
-    public bool Contains(int data)
+    public bool Contains(T data)
     {
-        IntNode temp = Head;
+        MyNode<T> temp = Head;
+        
         while (temp != null)
         {
-            if (temp.Data == data)
+            if (temp.Data.Equals(data))
             {
                 return true;
             }
@@ -44,16 +45,16 @@ public class IntList
     }
     
     // finding by indexer. debug this to see how it works. 
-    public int this[int index]
+    public T this[int index]
     {
         get
         {
             int count = 0;
-            IntNode temp = Head;
+            MyNode<T> temp = Head;
     
             if (index == 0)
             {
-                return Head.Data;
+                return temp.Data;
             }
             while (count++ != index)
             {
