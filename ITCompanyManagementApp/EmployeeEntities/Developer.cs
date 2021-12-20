@@ -18,4 +18,9 @@ public class Developer:Employee
     {
         return "I have implemented a method";
     }
+
+    public override string ToString()
+    {
+        return base.ToString() + ProgrammingLanguage;
+    }
 }

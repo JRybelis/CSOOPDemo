@@ -13,4 +13,9 @@ public class QAEngineer:Employee
     {
         return "I have created a test case.";
     }
+    
+    public override string ToString()
+    {
+        return base.ToString() + TestSpecialisation;
+    }
 }

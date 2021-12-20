@@ -77,4 +77,16 @@ public class ITCompany
 
         return builder.ToString();
     }
+
+    public string GetCompanyInformation()
+    {
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < _hiredEmployees; i++)
+        {
+            builder.Append(Employees[i].ToString());
+            builder.Append('\n');
+        }
+
+        return builder.ToString();
+    }
 }

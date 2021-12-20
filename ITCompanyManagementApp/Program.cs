@@ -31,7 +31,9 @@ class Program
         Console.WriteLine(ITCompany.AllHiredEmployeesInAllCompanies);
 
         string companyCoherentResults = companyCoherent.GetCompanyResults();
+        string companyCoherentInformation = companyCoherent.GetCompanyInformation();
         Console.WriteLine(companyCoherentResults);
+        Console.WriteLine(companyCoherentInformation);
         Console.ReadLine();
     }
 }

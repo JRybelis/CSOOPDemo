@@ -17,6 +17,11 @@ namespace ITCompanyManagementApp.EmployeeEntities
             return this.TaxID == (obj as Employee)?.TaxID;
         }
         public abstract string ProduceWorkResults();
+
+        public override string ToString()
+        {
+            return base.ToString() + TaxID + ", ";
+        }
     }
 }
 

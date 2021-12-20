@@ -13,4 +13,9 @@ public class BusinessAnalyst:Employee
     {
         return "I have created an UML diagram";
     }
+    
+    public override string ToString()
+    {
+        return base.ToString() + ToolUsed;
+    }
 }

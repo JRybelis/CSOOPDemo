@@ -15,4 +15,9 @@ public class QAAutomationEngineer:Employee
     {
         return "I have automated something.";
     }
+    
+    public override string ToString()
+    {
+        return base.ToString() + ProgrammingLanguage + ", " + TestSpecialisation;
+    }
 }
