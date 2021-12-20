@@ -34,6 +34,12 @@ class Program
         string companyCoherentInformation = companyCoherent.GetCompanyInformation();
         Console.WriteLine(companyCoherentResults);
         Console.WriteLine(companyCoherentInformation);
+
+        IntList list = new IntList();
+        list.Add(1);
+        list.Add(2);
+        list.Add(3);
+        
         Console.ReadLine();
     }
 }
