@@ -27,6 +27,39 @@ public class IntList
         
     }
 
+    public bool Contains(int data)
+    {
+        IntNode temp = Head;
+        while (temp != null)
+        {
+            if (temp.Data == data)
+            {
+                return true;
+            }
+
+            temp = temp.Next;
+        }
+
+        return false;
+    }
     
+    // finding by indexer. debug this to see how it works. 
+    public int this[int index]
+    {
+        get
+        {
+            int count = 0;
+            IntNode temp = Head;
     
+            if (index == 0)
+            {
+                return Head.Data;
+            }
+            while (count++ != index)
+            {
+                temp = temp.Next;
+            }
+            return temp.Data;
+        }
+    }
 }

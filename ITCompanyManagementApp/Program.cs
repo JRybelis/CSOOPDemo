@@ -39,6 +39,10 @@ class Program
         list.Add(1);
         list.Add(2);
         list.Add(3);
+
+        bool isContains = list.Contains(2);
+
+        int temp = list[1];
         
         Console.ReadLine();
     }
