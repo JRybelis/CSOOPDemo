@@ -66,6 +66,8 @@ class Program
         string taskTobeAssigned = "A very important task";
         
         companyCoherent.Employees.Sort(new EmployeeTaxIDComparer());
+        companyCoherent.Employees.Sort(new EmployeeLastNameLengthComparer());
+        
         Console.ReadLine();
     }
 }
