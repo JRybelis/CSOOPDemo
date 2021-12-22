@@ -7,18 +7,6 @@ public class EmployeeTaxIDComparer: IComparer<Employee>
 {
     public int Compare([AllowNull] Employee x, [AllowNull] Employee y)
     {
-        if (x.TaxID == y.TaxID)
-        {
-            return 0;
-        }
-
-        if (x.TaxID > y.TaxID)
-        {
-            return 1;
-        }
-        else
-        {
-            return -1;
-        }
+        return x.TaxID.CompareTo(y.TaxID);
     }
 }
