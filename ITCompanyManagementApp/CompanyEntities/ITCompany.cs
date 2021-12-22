@@ -6,18 +6,17 @@ namespace ITCompanyManagementApp.CompanyEntities;
 public class ITCompany
 {
     public static int AllHiredEmployeesInAllCompanies = 0; //static field, to count across all class instances.
-    private const int MaxEmployeeNumber = 10;
     private int _hiredEmployees;
     public Employee Director { get; }
     public string Name { get; }
-    private Employee[] Employees { get; set; }
+    private List<Employee> Employees { get; set; }
     
     public ITCompany(string name, Employee director)
     {
         Director = director;
         Name = name;
-        
-        Employees = new Employee[MaxEmployeeNumber];
+
+        Employees = new List<Employee>();
         _hiredEmployees = 0;
     }
 
@@ -54,15 +53,29 @@ public class ITCompany
 
     public void Hire(Employee employee)
     {
-        if (_hiredEmployees < MaxEmployeeNumber)
+        Employees.Add(employee);
+    }
+
+    public void HireMultipleEmployees(List<Employee> employees)
+    {
+        Employees.AddRange(employees);
+    }
+    public void Fire(int taxID)
+    {
+        Employee toBeFired = null;
+        
+        foreach (var employee in Employees)
         {
-            Employees[_hiredEmployees] = employee;
-            _hiredEmployees++;
-            AllHiredEmployeesInAllCompanies++;
+            if (employee.TaxID == taxID)
+            {
+                toBeFired = employee;
+                break;
+            }    
         }
-        else
+
+        if (toBeFired != null)
         {
-            throw new Exception("Cannot hire any more people.");
+            Employees.Remove(toBeFired);
         }
     }
 
@@ -88,5 +101,29 @@ public class ITCompany
         }
 
         return builder.ToString();
+    }
+
+    public void DoTheTask(string taskToBeDone)
+    {
+        foreach (var employee in Employees)
+        {
+            if (employee is ITaskAssigner)
+            {
+                (employee as ITaskAssigner).AssignTask((taskToBeDone));
+                break;
+            }    
+        }
+    }
+    
+    public void DemonstrateResults()
+    {
+        foreach (var employee in Employees)
+        {
+            if (employee is IDemonstrator)
+            {
+                (employee as IDemonstrator).MakeDemo();
+                break;
+            }    
+        }
     }
 }

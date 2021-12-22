@@ -1,6 +1,6 @@
 namespace ITCompanyManagementApp.EmployeeEntities;
 
-public class Developer:Employee
+public class Developer:Employee, IDemonstrator
 {
     public string ProgrammingLanguage { get; set; }
     public Developer(string firstName, string lastName, int taxId, string programmingLanguage) : base(firstName, lastName, taxId)
@@ -22,5 +22,10 @@ public class Developer:Employee
     public override string ToString()
     {
         return base.ToString() + ProgrammingLanguage;
+    }
+
+    public void MakeDemo()
+    {
+        //demonstrate project
     }
 }

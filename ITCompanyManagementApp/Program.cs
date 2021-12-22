@@ -2,6 +2,8 @@
 using ITCompanyManagementApp.CommonEntities;
 using ITCompanyManagementApp.CompanyEntities;
 using ITCompanyManagementApp.EmployeeEntities;
+using System.Collections.Generic;
+using System.Text;
 
 namespace ITCompanyManagementApp;
 
@@ -14,6 +16,8 @@ class Program
         Employee person2 = new QAAutomationEngineer("Steve", "Bannon", 4, "C#", "Web");
         Employee person3 = new BusinessAnalyst("Mike", "Judge", 5, "UML Creator");
         Employee person4 = new QAEngineer("Darren", "Willis", 6, "Mobile");
+        Employee person5 = new QAEngineerTeamLead("Stephen", "Wallace", 7, "Mobile");
+        Employee person6 = new DeveloperTeamLead("Carl", "Horst", 8, "Web");
 
         var companyCoherent = new ITCompany("Coherent", new Developer("Mike", "Brown", 3, "C"));
 
@@ -21,6 +25,7 @@ class Program
         companyCoherent.Hire(person2);
         companyCoherent.Hire(person3);
         companyCoherent.Hire(person4);
+        companyCoherent.HireMultipleEmployees(new List<Employee>{person5, person6});
 
         // indexers: syntactic sugar as opposed to calling company.GetEmployeeByName("John", "Cusack");
         var dummy = companyCoherent["Mr. John", "Cusack"];
@@ -49,6 +54,16 @@ class Program
         bool isContains = list.Contains(2);
 
         int temp = list[1];
+
+        
+        List<Employee> employees = new List<Employee>();
+        employees.Add(person1);
+        employees.Add(person2);
+        employees.Add(person3);
+        employees.Add(person4);
+        
+        string taskTobeAssigned = "A very important task";
+        
         
         Console.ReadLine();
     }
