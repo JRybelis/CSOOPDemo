@@ -9,7 +9,7 @@ public class ITCompany
     private int _hiredEmployees;
     public Employee Director { get; }
     public string Name { get; }
-    private List<Employee> Employees { get; set; }
+    internal List<Employee> Employees { get; set; }
     
     public ITCompany(string name, Employee director)
     {

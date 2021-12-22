@@ -4,6 +4,7 @@ using ITCompanyManagementApp.CompanyEntities;
 using ITCompanyManagementApp.EmployeeEntities;
 using System.Collections.Generic;
 using System.Text;
+using ITCompanyManagementApp.Comparer;
 
 namespace ITCompanyManagementApp;
 
@@ -64,7 +65,7 @@ class Program
         
         string taskTobeAssigned = "A very important task";
         
-        
+        companyCoherent.Employees.Sort(new EmployeeTaxIDComparer());
         Console.ReadLine();
     }
 }
