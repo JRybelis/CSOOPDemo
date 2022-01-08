@@ -126,4 +126,21 @@ public class ITCompany
             }    
         }
     }
+
+    public List<Employee> GetEmployeeByConditionID(Func<int,bool> condition) // Func<input,output> syntactic sugar - generic delegate. No need to declare delegates separately.
+    {
+        List<Employee> selectedEmployees = new List<Employee>();
+        
+        foreach (var employee in Employees)
+        {
+            if (condition(employee.TaxID))
+            {
+                selectedEmployees.Add(employee);
+            }    
+        }
+
+        return selectedEmployees;
+    }
+    
+    
 }

@@ -69,6 +69,27 @@ class Program
         companyCoherent.Employees.Sort(new EmployeeTaxIDComparer());
         companyCoherent.Employees.Sort(new EmployeeLastNameLengthComparer());
         
+        //delegates where functions called are defined separately, below: 
+        var result1 = companyCoherent.GetEmployeeByConditionID(ConditionMoreThan2);
+        var result2 = companyCoherent.GetEmployeeByConditionID(ConditionMoreThan1LessOfEqual3);
+        
+        var result3 = companyCoherent.GetEmployeeByConditionID(delegate(int x)
+        {
+            return x > 4;
+        });// same delegate functionality but with an anonymous function, defined at the same time the call is being made. Compiler will expand and create a method, without creating a name for it. There is no need to reuse it in the future, so no need for a name.
+        
+        var result4 = companyCoherent.GetEmployeeByConditionID(x => x < 7); // same but with a lambda expression (arrow function);
+        
         Console.ReadLine();
+    }
+
+    static bool ConditionMoreThan2(int data)
+    {
+        return data > 2;
+    }
+
+    static bool ConditionMoreThan1LessOfEqual3(int data)
+    {
+        return data > 1 && data <= 3;
     }
 }
