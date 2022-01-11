@@ -2,8 +2,8 @@ namespace ITCompanyManagementApp.CommonEntities;
 
 public abstract class Person
 {
-    private string _firstName;
-    //properties to be used, in order to avoid fields, as above
+    //properties ought to be used, in order to avoid granting direct outside access to fields.
+    private string _firstName; //the field comes into play, when props need to be extended with logic
     public string FirstName
     {
         get

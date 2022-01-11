@@ -2,7 +2,7 @@ using ITCompanyManagementApp.CommonEntities;
 
 namespace ITCompanyManagementApp.EmployeeEntities
 {
-    public abstract class Employee:Person
+    public abstract class Employee:Person //inheritance
     {
         public int TaxID { get; }
 
