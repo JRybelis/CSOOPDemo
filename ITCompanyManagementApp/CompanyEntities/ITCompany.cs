@@ -5,7 +5,7 @@ namespace ITCompanyManagementApp.CompanyEntities;
 
 public class ITCompany
 {
-    public static int AllHiredEmployeesInAllCompanies = 0; //static field, to count across all class instances.
+    public static int AllHiredEmployeesInAllCompanies = 0; //static field, to count across all class instances. Dangerous, rarely necessary
     private int _hiredEmployees;
     public Employee Director { get; }
     public string Name { get; }
@@ -20,8 +20,7 @@ public class ITCompany
         _hiredEmployees = 0;
     }
 
-    public Employee
-        this[int taxId] //indexer - read on it.Makes the presentation of the object as an array.
+    public Employee this[int taxId] //indexer - read on it.Makes the presentation of the object as an array.
     {
         get
         {
