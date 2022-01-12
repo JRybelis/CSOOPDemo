@@ -8,12 +8,6 @@ public class Developer:Employee, IDemonstrator
         ProgrammingLanguage = programmingLanguage;
     }
 
-    public void DoCoding()
-    {
-        Console.WriteLine("Coding now...");
-    }
-
-
     public override string ProduceWorkResults()
     {
         return "I have implemented a method";
