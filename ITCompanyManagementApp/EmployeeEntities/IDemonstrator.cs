@@ -1,6 +1,8 @@
-namespace ITCompanyManagementApp.EmployeeEntities;
-
-public interface IDemonstrator
+namespace ITCompanyManagementApp.EmployeeEntities
 {
-    void MakeDemo();
+    public interface IDemonstrator
+    {
+        void MakeDemo();
+    }
 }
+

@@ -1,18 +1,21 @@
-namespace ITCompanyManagementApp.EmployeeEntities;
+using ITCompanyManagementApp.EmployeeEntities;
 
-public class BusinessAnalystTeamLead: BusinessAnalyst, ITaskAssigner, IDemonstrator
+namespace ITCompanyManagementApp.EmployeeEntities
 {
-    public BusinessAnalystTeamLead(string firstName, string lastName, int taxId, string toolUsed) : base(firstName, lastName, taxId, toolUsed)
+    public class BusinessAnalystTeamLead: BusinessAnalyst, ITaskAssigner, IDemonstrator
     {
-        ToolUsed = toolUsed;
-    }
-    public void AssignTask(string Task)
-    {
-        //Do something
-    }
+        public BusinessAnalystTeamLead(string firstName, string lastName, int taxId, string toolUsed) : base(firstName, lastName, taxId, toolUsed)
+        {
+            ToolUsed = toolUsed;
+        }
+        public void AssignTask(string Task)
+        {
+            //Do something
+        }
 
-    public void MakeDemo()
-    {
-        //demonstrate the project
+        public void MakeDemo()
+        {
+            //demonstrate the project
+        }
     }
 }

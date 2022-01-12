@@ -1,6 +1,7 @@
-namespace ITCompanyManagementApp.EmployeeEntities;
-
-public interface ITaskAssigner
+namespace ITCompanyManagementApp.EmployeeEntities
 {
-    void AssignTask(string tasToBeAssigned);
+    public interface ITaskAssigner
+    {
+        void AssignTask(string tasToBeAssigned);
+    }
 }

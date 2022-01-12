@@ -1,25 +1,29 @@
-namespace ITCompanyManagementApp.EmployeeEntities;
+using ITCompanyManagementApp.EmployeeEntities;
 
-public class Developer:Employee, IDemonstrator
+namespace ITCompanyManagementApp.EmployeeEntities
 {
-    public string ProgrammingLanguage { get; set; }
-    public Developer(string firstName, string lastName, int taxId, string programmingLanguage) : base(firstName, lastName, taxId)
+    public class Developer:Employee, IDemonstrator
     {
-        ProgrammingLanguage = programmingLanguage;
-    }
+        public string ProgrammingLanguage { get; set; }
+        public Developer(string firstName, string lastName, int taxId, string programmingLanguage) : base(firstName, lastName, taxId)
+        {
+            ProgrammingLanguage = programmingLanguage;
+        }
 
-    public override string ProduceWorkResults()
-    {
-        return "I have implemented a method";
-    }
+        public override string ProduceWorkResults()
+        {
+            return "I have implemented a method";
+        }
 
-    public override string ToString()
-    {
-        return base.ToString() + ProgrammingLanguage;
-    }
+        public override string ToString()
+        {
+            return base.ToString() + ProgrammingLanguage;
+        }
 
-    public void MakeDemo()
-    {
-        //demonstrate project
+        public void MakeDemo()
+        {
+            //demonstrate project
+        }
     }
 }
+

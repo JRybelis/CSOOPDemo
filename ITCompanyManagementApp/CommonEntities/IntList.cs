@@ -1,66 +1,68 @@
-namespace ITCompanyManagementApp.CommonEntities;
-
-public class MyList<T>
+namespace ITCompanyManagementApp.CommonEntities
 {
-    public MyNode<T> Head { get; set; }
-    public MyNode<T> Tail { get; set; }
+    public class MyList<T>
+    {
+        public MyNode<T> Head { get; set; }
+        public MyNode<T> Tail { get; set; }
+        
+        public MyList()
+        {
+            Head = null;
+        }
     
-    public MyList()
-    {
-        Head = null;
-    }
-
-    public void Add(T data)
-    {
-        MyNode<T> node = new MyNode<T>(data);
-        
-        if (Head == null)
+        public void Add(T data)
         {
-            Head = node;
-            Tail = node;
-        }
-        else
-        {
-            Tail.Next = node;
-            Tail = node;
-        }
-        
-    }
-
-    public bool Contains(T data)
-    {
-        MyNode<T> temp = Head;
-        
-        while (temp != null)
-        {
-            if (temp.Data.Equals(data))
+            MyNode<T> node = new MyNode<T>(data);
+            
+            if (Head == null)
             {
-                return true;
+                Head = node;
+                Tail = node;
             }
-
-            temp = temp.Next;
+            else
+            {
+                Tail.Next = node;
+                Tail = node;
+            }
+            
         }
-
-        return false;
-    }
     
-    // finding by indexer. debug this to see how it works. 
-    public T this[int index]
-    {
-        get
+        public bool Contains(T data)
         {
-            int count = 0;
             MyNode<T> temp = Head;
+            
+            while (temp != null)
+            {
+                if (temp.Data.Equals(data))
+                {
+                    return true;
+                }
     
-            if (index == 0)
-            {
-                return temp.Data;
-            }
-            while (count++ != index)
-            {
                 temp = temp.Next;
             }
-            return temp.Data;
+    
+            return false;
+        }
+        
+        // finding by indexer. debug this to see how it works. 
+        public T this[int index]
+        {
+            get
+            {
+                int count = 0;
+                MyNode<T> temp = Head;
+        
+                if (index == 0)
+                {
+                    return temp.Data;
+                }
+                while (count++ != index)
+                {
+                    temp = temp.Next;
+                }
+                return temp.Data;
+            }
         }
     }
 }
+

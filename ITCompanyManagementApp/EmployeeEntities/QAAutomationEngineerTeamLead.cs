@@ -1,15 +1,16 @@
-namespace ITCompanyManagementApp.EmployeeEntities;
-
-public class QAAutomationEngineerTeamLead: QAAutomationEngineer, ITaskAssigner
+namespace ITCompanyManagementApp.EmployeeEntities
 {
-    public QAAutomationEngineerTeamLead(string firstName, string lastName, int taxId, string programmingLanguage, string testSpecialisation) : base(firstName, lastName, taxId, programmingLanguage, testSpecialisation)
+    public class QaAutomationEngineerTeamLead: QaAutomationEngineer, ITaskAssigner
     {
-        ProgrammingLanguage = programmingLanguage;
-        TestSpecialisation = testSpecialisation;
-    }
+        public QaAutomationEngineerTeamLead(string firstName, string lastName, int taxId, string programmingLanguage, string testSpecialisation) : base(firstName, lastName, taxId, programmingLanguage, testSpecialisation)
+        {
+            ProgrammingLanguage = programmingLanguage;
+            TestSpecialisation = testSpecialisation;
+        }
 
-    public void AssignTask(string Task)
-    {
-        //do something
+        public void AssignTask(string Task)
+        {
+            //do something
+        }
     }
 }

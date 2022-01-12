@@ -1,11 +1,14 @@
+using System.Collections.Generic;
 using ITCompanyManagementApp.EmployeeEntities;
 
-namespace ITCompanyManagementApp.Comparer;
-
-public class EmployeeLastNameLengthComparer:IComparer<Employee>
+namespace ITCompanyManagementApp.Comparer
 {
-    public int Compare(Employee? x, Employee? y)
+    public class EmployeeLastNameLengthComparer:IComparer<Employee>
     {
-        return x.LastName.CompareTo(y.LastName);
+        public int Compare(Employee? x, Employee? y)
+        {
+            return x.LastName.CompareTo(y.LastName);
+        }
     }
 }
+

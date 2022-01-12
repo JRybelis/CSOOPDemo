@@ -1,13 +1,14 @@
-namespace ITCompanyManagementApp.EmployeeEntities;
-
-public class DeveloperTeamLead: Developer, ITaskAssigner
+namespace ITCompanyManagementApp.EmployeeEntities
 {
-    public DeveloperTeamLead(string firstName, string lastName, int taxId, string programmingLanguage) : base(firstName, lastName, taxId, programmingLanguage)
+    public class DeveloperTeamLead: Developer, ITaskAssigner
     {
-        ProgrammingLanguage = programmingLanguage;
-    }
-    public void AssignTask(string Task)
-    {
-        //do something
+        public DeveloperTeamLead(string firstName, string lastName, int taxId, string programmingLanguage) : base(firstName, lastName, taxId, programmingLanguage)
+        {
+            ProgrammingLanguage = programmingLanguage;
+        }
+        public void AssignTask(string Task)
+        {
+            //do something
+        }
     }
 }

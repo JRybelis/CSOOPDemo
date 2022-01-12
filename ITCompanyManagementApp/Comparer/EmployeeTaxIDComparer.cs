@@ -1,12 +1,14 @@
+using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using ITCompanyManagementApp.EmployeeEntities;
 
-namespace ITCompanyManagementApp.Comparer;
-
-public class EmployeeTaxIDComparer: IComparer<Employee>
+namespace ITCompanyManagementApp.Comparer
 {
-    public int Compare([AllowNull] Employee x, [AllowNull] Employee y)
+    public class EmployeeTaxIDComparer : IComparer<Employee>
     {
-        return x.TaxID.CompareTo(y.TaxID);
+        public int Compare([AllowNull] Employee x, [AllowNull] Employee y)
+        {
+            return x.TaxID.CompareTo(y.TaxID);
+        }
     }
 }

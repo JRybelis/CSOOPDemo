@@ -6,17 +6,17 @@ using System.Collections.Generic;
 using System.Text;
 using ITCompanyManagementApp.Comparer;
 
-namespace ITCompanyManagementApp;
-
-class Program
+namespace ITCompanyManagementApp
+{
+    class Program
 {
     static void Main(string[] args)
     {
         /* type of reference is abstract class Employee, common to all of Employee class derivatives */ Employee person1 = new Developer /* object type is Developer */("John", "Cusack",
             3, "C++"); //assign another Developer object instance to 'person1 as Developer', if needed, or to 'person1' if assigning it as Employee type 
-        Employee person2 = new QAAutomationEngineer("Steve", "Bannon", 4, "C#", "Web");
+        Employee person2 = new QaAutomationEngineer("Steve", "Bannon", 4, "C#", "Web");
         Employee person3 = new BusinessAnalyst("Mike", "Judge", 5, "UML Creator");
-        Employee person4 = new QAEngineer("Darren", "Willis", 6, "Mobile");
+        Employee person4 = new QaEngineer("Darren", "Willis", 6, "Mobile");
         Employee person5 = new QAEngineerTeamLead("Stephen", "Wallace", 7, "Mobile");
         Employee person6 = new DeveloperTeamLead("Carl", "Horst", 8, "Web");
 
@@ -93,3 +93,5 @@ class Program
         return data > 1 && data <= 3;
     }
 }
+}
+

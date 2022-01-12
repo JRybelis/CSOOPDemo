@@ -1,21 +1,24 @@
-namespace ITCompanyManagementApp.EmployeeEntities;
+using ITCompanyManagementApp.EmployeeEntities;
 
-public class QAEngineer:Employee
+namespace ITCompanyManagementApp.EmployeeEntities
 {
-    public string TestSpecialisation { get; set; }
-    
-    public QAEngineer(string firstName, string lastName, int taxId, string testSpecialisation) : base(firstName, lastName, taxId)
+    public class QaEngineer:Employee
     {
-        TestSpecialisation = testSpecialisation;
-    }
+        public string TestSpecialisation { get; set; }
+    
+        public QaEngineer(string firstName, string lastName, int taxId, string testSpecialisation) : base(firstName, lastName, taxId)
+        {
+            TestSpecialisation = testSpecialisation;
+        }
 
-    public override string ProduceWorkResults()
-    {
-        return "I have created a test case.";
-    }
+        public override string ProduceWorkResults()
+        {
+            return "I have created a test case.";
+        }
     
-    public override string ToString()
-    {
-        return base.ToString() + TestSpecialisation;
+        public override string ToString()
+        {
+            return base.ToString() + TestSpecialisation;
+        }
     }
 }
