@@ -16,7 +16,7 @@ namespace ITCompanyManagementApp.EmployeeEntities
         {
             return this.TaxID == (obj as Employee)?.TaxID;
         }
-        public abstract string ProduceWorkResults();
+        public abstract string ProduceWorkResults(); // implementation of this is defined in derived classes
 
         public override string ToString()
         {

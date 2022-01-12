@@ -12,7 +12,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        /* type of reference is Employee */ Employee person1 = new Developer /* object type is Developer */("John", "Cusack",
+        /* type of reference is abstract class Employee, common to all of Employee class derivatives */ Employee person1 = new Developer /* object type is Developer */("John", "Cusack",
             3, "C++"); //assign another Developer object instance to 'person1 as Developer', if needed, or to 'person1' if assigning it as Employee type 
         Employee person2 = new QAAutomationEngineer("Steve", "Bannon", 4, "C#", "Web");
         Employee person3 = new BusinessAnalyst("Mike", "Judge", 5, "UML Creator");
