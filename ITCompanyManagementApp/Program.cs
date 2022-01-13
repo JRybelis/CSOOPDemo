@@ -41,11 +41,6 @@ namespace ITCompanyManagementApp
         Console.WriteLine(companyCoherentResults);
         Console.WriteLine(companyCoherentInformation);
 
-        List<Employee> employees = new List<Employee>();
-        employees.Add(person1);
-        employees.Add(person2);
-        employees.Add(person3);
-        employees.Add(person4);
         
         string taskTobeAssigned = "A very important task";
         

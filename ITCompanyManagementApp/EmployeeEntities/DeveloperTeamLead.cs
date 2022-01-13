@@ -4,7 +4,7 @@ namespace ITCompanyManagementApp.EmployeeEntities
     {
         public DeveloperTeamLead(string firstName, string lastName, int taxId, string programmingLanguage) : base(firstName, lastName, taxId, programmingLanguage)
         {
-            ProgrammingLanguage = programmingLanguage;
+            
         }
         public void AssignTask(string Task)
         {

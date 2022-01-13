@@ -6,7 +6,7 @@ namespace ITCompanyManagementApp.EmployeeEntities
     {
         public BusinessAnalystTeamLead(string firstName, string lastName, int taxId, string toolUsed) : base(firstName, lastName, taxId, toolUsed)
         {
-            ToolUsed = toolUsed;
+            
         }
         public void AssignTask(string Task)
         {
