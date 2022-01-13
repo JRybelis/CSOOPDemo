@@ -3,7 +3,7 @@ namespace ITCompanyManagementApp.CommonEntities
     public class MyList<T>
     {
         public MyNode<T> Head { get; set; }
-        public MyNode<T> Tail { get; set; }
+        private MyNode<T> Tail { get; set; }
         
         public MyList()
         {
