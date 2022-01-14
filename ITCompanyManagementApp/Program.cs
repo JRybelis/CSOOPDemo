@@ -41,7 +41,7 @@ namespace ITCompanyManagementApp
         Console.WriteLine(companyCoherentResults);
         Console.WriteLine(companyCoherentInformation);
 
-        
+         
         string taskTobeAssigned = "A very important task";
         
         //interfaces allow custom sorting:
@@ -50,7 +50,7 @@ namespace ITCompanyManagementApp
         
         //delegates where functions called are defined separately, below: 
         var result1 = companyCoherent.GetEmployeeByConditionID(ConditionMoreThan2);
-        var result2 = companyCoherent.GetEmployeeByConditionID(ConditionMoreThan1LessOfEqual3);
+        var result2 = companyCoherent.GetEmployeeByConditionID(ConditionMoreThan1LessOrEqual3);
         
         var result3 = companyCoherent.GetEmployeeByConditionID(delegate(int x)
         {
@@ -67,7 +67,7 @@ namespace ITCompanyManagementApp
         return data > 2;
     }
 
-    static bool ConditionMoreThan1LessOfEqual3(int data)
+    static bool ConditionMoreThan1LessOrEqual3(int data)
     {
         return data > 1 && data <= 3;
     }
