@@ -128,7 +128,7 @@ namespace ITCompanyManagementApp.CompanyEntities
             }
         }
 
-        public List<Employee> GetEmployeeByConditionID(Func<int,bool> condition) // Func<input,output> syntactic sugar - generic delegate. No need to declare delegates separately.
+        public List<Employee> GetEmployeeByConditionID(Func<int,bool> condition) // Func<input,output> syntactic sugar - generic delegate. No need to declare delegates separately at the top of the class now. For void return methods - Action <T> generic delegate is used. 
         {
             List<Employee> selectedEmployees = new List<Employee>();
             
